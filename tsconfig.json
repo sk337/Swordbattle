@@ -1,0 +1,25 @@
+{
+  "entrypoints": ["src/index.ts"],
+  "include": ["src/**/*"],
+  "exclude": ["node_modules/*", "dist/*"],
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    "declaration": true,
+    "target": "ES2020",
+    "module": "CommonJS",
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "moduleResolution": "node",
+    "types": ["node", "node-fetch"],
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true
+  }
+}
