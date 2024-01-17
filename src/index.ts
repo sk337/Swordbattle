@@ -63,7 +63,7 @@ export async function changeUsername(token: string, username: string): Promise<p
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      "Authorisation": `bearer ${token}`,
+      "Authorization": `bearer ${token}`,
     },
     body: JSON.stringify({
       newUsername: username,
