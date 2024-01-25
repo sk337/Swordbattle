@@ -13,7 +13,7 @@ export interface account {
   secret: string;
   gems: number;
   xp: number;
-  email?: string;
+  email: string;
   password: string;
   skins: {
     equipped: number;

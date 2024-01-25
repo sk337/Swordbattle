@@ -76,3 +76,24 @@ export async function changeUsername(token: string, username: string): Promise<p
   }
   return data as privUser;
 }
+
+/**
+ * Retrieves private user data using the authentication token
+ * @param {string} token - The user's authentication token
+ * @returns {Promise<privUser>} A promise that resolves to a privUser object
+ */
+export async function getPrivatedata(token: string): Promise<privUser> {
+  const response = await fetch(apiUrl + "/auth/privatedata/", {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `bearer ${token}`,
+    },
+  });
+  const data = await response.json();
+  const ec = data as ApiResponse;
+  if (ec.error) {
+    throw new Error(ec.message);
+  }
+  return data as privUser;
+}
